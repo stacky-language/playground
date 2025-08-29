@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import Editor from '@monaco-editor/react'
 import './App.css'
+import StackyLogo from './assets/stacky.svg?react'
+
 import init, { run } from "../pkg/stacky_wasm_interpreter";
+
 export default function App() {
   const [initialized, setInitialized] = useState(false);
   const editorRef = useRef<any>(null)
@@ -282,7 +285,7 @@ export default function App() {
         <pre>{output}</pre>
       </div>
       <div className="toolbar">
-        <img src="/stacky.svg" alt="Stacky Logo" className="stacky-logo" />
+        <StackyLogo className="stacky-logo" />
         <button onClick={onRun}>Run</button>
       </div>
     </div>
