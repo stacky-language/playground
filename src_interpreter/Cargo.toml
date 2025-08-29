@@ -5,8 +5,8 @@ edition = "2024"
 
 [dependencies]
 wasm-bindgen = "0.2"
-stacky = { path = "../../stacky" }
 console_error_panic_hook = "0.1.7"
+stacky = "0.1.0"
 
 [lib]
 crate-type = ["cdylib"]

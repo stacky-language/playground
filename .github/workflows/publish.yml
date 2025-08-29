@@ -30,22 +30,41 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: 'npm'
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+
+      - name: Build stacky-wasm-interpreter (stc_interpreter)
+        working-directory: src_interpreter
+        run: |
+          rustup target add wasm32-unknown-unknown
+          cargo install wasm-pack
+          wasm-pack build --release --target web --out-dir ../pkg
+      
       - name: Build
         run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
           # Upload dist folder
           path: './dist'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
