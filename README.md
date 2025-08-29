@@ -1,6 +1,7 @@
 # Stacky Playground
 
 The web playground for the Stacky language.
+
 https://stacky-language.github.io/playground
 
 ![](./docs/images/img-playground.png)
