@@ -1,0 +1,73 @@
+body {
+  background: #0f0f10;
+}
+
+.app-card {
+  margin: 20px auto;
+  background: #0f0f10;
+  border-radius: 12px;
+  padding: 12px;
+  color: #e6e6e6;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  position: relative;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+}
+
+.toolbar button {
+  background: #0e639c;
+  color: white;
+  border: none;
+  width: 64px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.editor-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.output {
+  margin-top: 12px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.output-label {
+  color: #9aa0a6;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.output pre {
+  margin: 0;
+  color: #d6d6d6;
+  white-space: pre-wrap;
+  font-size: 16px;
+}
+
+/* Ensure Monaco can shrink inside flex containers */
+.app-card,
+.editor-wrap,
+.output {
+  min-width: 0;
+}
+
+.stacky-logo {
+  position: absolute;
+  align-self: center;
+  left: 15px;
+  height: 26px;
+  pointer-events: none;
+  opacity: 0.85;
+}
