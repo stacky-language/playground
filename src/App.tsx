@@ -49,6 +49,7 @@ export default function App() {
       'neg',
       'dup',
       'print',
+      'println',
       'read',
       'goto',
       'br',

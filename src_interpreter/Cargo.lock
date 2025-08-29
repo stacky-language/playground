@@ -167,9 +167,9 @@ checksum = "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
 
 [[package]]
 name = "stacky"
-version = "0.1.0"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0bc00d9f34befa1b6dcbd0cb023fa2ff7347e1b7b3848e3fe2a028622ce1f0f7"
+checksum = "b7b04bfb733ae029cb0915181db2aa322c8cac30f7f85fb6c60ecae1f91e6820"
 dependencies = [
  "chrono",
 ]
